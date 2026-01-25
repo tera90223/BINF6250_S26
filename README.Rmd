@@ -100,6 +100,7 @@ Group leader's reflection on the project
 
 ### Stefanie Moreno
 
+
 While this assignment was not exceptionally challenging, it was an important lesson in parsing and interpreting VCF files with Python, and upon running our code with the VCF file and receiving the results we were hoping to see, it was very rewarding. I learned how to identify the rarity of a gene variant and how to extract the diseases associated with variants having an AF_EXAC frequency of less than 0.01% and calculate how often these diseases occurred. It was interesting to see how small formatting differences in genomic data can so significantly impact parsing workflows. The highly structured format of a VCF file is essential for accurate retrieval of information from such a dense datasource. Upon learning about all the varieties of information that can be held inside a VCF file and how the organization and formatting structure can even allow for nonspecified entries and their proper retrieval, I was actually amazed. Ultimately, this project reinforced for me the critical importance of file structure- down to a single keystroke, or where to input "MISSING" versus "." or nothing at all- and if not input properly, that data is completely worthless.
 
 ### Victoria Van Berlo

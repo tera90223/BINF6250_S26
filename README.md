@@ -161,6 +161,7 @@ Group leader’s reflection on the project
 
 ### Stefanie Moreno
 
+
 While this assignment was not exceptionally challenging, it was an
 important lesson in parsing and interpreting VCF files with Python, and
 upon running our code with the VCF file and receiving the results we
