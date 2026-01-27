@@ -32,9 +32,13 @@ def parse_line(line: str) -> list:
 
     # Check if dictionary has allele frequency key
     if "AF_EXAC" in variant_info_dict:
-        # Convert allele frequency value into float
-        af_exac = float(variant_info_dict["AF_EXAC"])
-        # Check if variant is rare using allele frequency
+        # Convert AF_EXAC value to float; skip if not possible
+        try:
+            af_exac = float(info_dict["AF_EXAC"])
+        # If value error returned (ie, string entry input errors)
+        except ValueError:
+            return []  # Return empty list
+            
         if af_exac < rare_threshold:
             # Get all diseases for rare variant
             if "CLNDN" in variant_info_dict:
@@ -80,7 +84,7 @@ def read_file(filename: str) -> Counter:
         # Return dictionary
         return disease_counter
     except Exception as e:
-        print(f"An error occurred while reading file: {e}")
+        print(f"An error occurred while reading file: {e}")  ***I DONT UNDERSTAND WHY WE ARE LEAVING AN ERROR HERE I THOUGHT WE WERE TRYING TO ACCOUNT FOR ALL POSSIBLE ERRORS?
 
 
 if __name__ == "__main__":
